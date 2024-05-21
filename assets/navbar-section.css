@@ -11,17 +11,3 @@
   background: transparent !important;
   box-shadow: none !important;
 }
-
-/* Asegura que el NavBar siempre sea visible y esté fijo en la parte superior */
-.v-app-bar {
-  position: fixed; 
-  top: 0;          
-  left: 0;         
-  width: 100%;     
-  z-index: 10;     
-}
-
-/* Asegura que el contenido no se oculte debajo del AppBar fijo */
-.v-content {
-  padding-top: 64px; 
-}

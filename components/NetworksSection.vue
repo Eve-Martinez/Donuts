@@ -21,14 +21,12 @@
 
 <script>
 export default {
-  data() {
-    return {
-      platforms: [
-        { urlImg: "/img/whatsapp.png", name: "WhatsApp", displayName: "125-159-1598", link: "https://wa.me/1251591598" },
-        { urlImg: "/img/instagram.png", name: "Instagram", displayName: "@donasexpress", link: "https://instagram.com/donasexpress" },
-      ]
-    };
-  }
+  props: {
+    platforms: {
+      type: Array,
+      required: true,
+    },
+  },
 };
 </script>
 

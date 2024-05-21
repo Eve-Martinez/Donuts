@@ -62,12 +62,12 @@
 </template>
 
 <script>
-//import FooterSection from '~/components/FooterSection.vue';
+import FooterSection from '~/components/FooterSection.vue';
 
 export default {
-/** components: {
+  components: {
     FooterSection,
-  },*/
+  },
   data() {
     return {
       isMobile: false,
@@ -92,15 +92,12 @@ export default {
       this.drawer = !this.drawer;
     },
     checkIfMobile() {
-    console.log("Checking if mobile:", window.innerWidth);
-    this.isMobile = window.innerWidth <= 768;
-    this.sheetHeight = this.isMobile ? 'auto' : '600px';
-  },
+      this.isMobile = window.innerWidth <= 768;
+      this.sheetHeight = this.isMobile ? 'auto' : '600px';
+    },
     selectSection(sectionId) {
       this.scrollToSection(sectionId);
-      if (this.isMobile) {
       this.drawer = false;
-      }
     },
   }
 };

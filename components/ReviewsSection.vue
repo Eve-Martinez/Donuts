@@ -14,7 +14,7 @@
             <v-card-text>
               <p>{{ comment.review }}</p>
             </v-card-text>
-            <v-btn @click="deleteComment(index)" color="error">Delete</v-btn>
+            <v-btn @click="$emit('delete-comment', index)" color="error">Delete</v-btn>
           </v-card>
         </v-flex>
         <v-flex md6>
@@ -31,12 +31,14 @@
 
 <script>
 export default {
+  props: {
+    comments: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      comments: [
-        { name: "Carlos", review: "Deliciosas donas, las mejores que he probado." },
-        { name: "Ana", review: "Excelente servicio y sabor incomparable." }
-      ],
       newComment: {
         name: '',
         review: '',
@@ -46,13 +48,10 @@ export default {
   methods: {
     addComment() {
       if (this.newComment.name && this.newComment.review) {
-        this.comments.push({ ...this.newComment });
+        this.$emit('add-comment', { ...this.newComment });
         this.newComment.name = '';
         this.newComment.review = '';
       }
-    },
-    deleteComment(index) {
-      this.comments.splice(index, 1);
     },
   },
 };
