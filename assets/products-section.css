@@ -1,0 +1,28 @@
+.title {
+    background-color: #FFF5FA;
+    padding: 1rem;
+    margin: 3.5rem;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .titulo-text {
+    color: #E84293;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  .subtitulo-text {
+    color: #333333;
+    font-size: 45px;
+    font-weight: bold;
+  }
+  
+  .elevate-on-hover {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .elevate-on-hover:hover {
+    transform: translateY(-10px);
+  }
+  
