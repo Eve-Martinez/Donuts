@@ -1,4 +1,4 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -6,15 +6,15 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - donut',
-    title: 'donut',
+    titleTemplate: '%s - Donuts',
+    title: 'Donuts',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Your description here' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -53,9 +53,8 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     theme: {
-      light: true,
+      dark: false,
       themes: {
         light: {
           primary: colors.blue.darken2,
@@ -65,9 +64,18 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
-      }
-    }
+        },
+        dark: {
+          primary: colors.blue.lighten3,
+          accent: colors.grey.lighten3,
+          secondary: colors.amber.lighten3,
+          info: colors.teal.lighten3,
+          warning: colors.amber.lighten3,
+          error: colors.deepOrange.lighten3,
+          success: colors.green.lighten3
+        },
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
